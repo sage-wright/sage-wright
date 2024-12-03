@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sage Wright</title>
+    <style>
+      /* load heading font */
+      @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@700');
+
+      /* load body font */
+      @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Hind:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=Hind:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=Hind:ital,wght@700');
+
+      /* load mono font */
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Monox:wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Monox:ital,wght@400');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Monox:wght@700');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains Monox:ital,wght@700');
+
+      /* load emoji font */
+      @font-face {
+        font-family: "Noto Color Emoji";
+        src: url('assets/fonts/emoji/NotoColorEmoji-Regular.ttf');
+        font-weight: 400;
+      }
+  
+      :root {
+        /* colors */
+        --primary: #dc8a78;
+        --secondary: #209fb5;
+        --tertiary: #40a02b;
+        /* shades */
+        --base: #eff1f5;
+        --mantle: #e6e9ef;
+        --crust: #dce0e8;
+        --overlay: #9ca0b0;
+        --footer: #000000cc;
+        /* text */
+        --text: #4c4f69;
+        --hltext: var(--base);
+        color: var(--text);
+        /* background-specific text */
+        --primary-text: var(--hltext);
+        --secondary-text: var(--hltext);
+        --tertiary-text: var(--hltext);
+        --base-text: var(--text);
+        --mantle-text: var(--text);
+        --crust-text: var(--text);
+        --overlay-text: var(--hltext);
+        --footer-text: var(--hltext);
+        /* fonts */
+        --heading: Josefin Sans, Noto Color Emoji;
+        --body: Hind, Noto Color Emoji;
+        --mono: JetBrains Monox, Noto Color Emoji;
+        font-family: var(--body); 
+      }
+      /* dark mode */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* colors */
+          --primary: #b4befe;
+          --secondary: #f5e0dc;
+          --tertiary: #94e2d5;
+          /* shades */
+          --base: #1e1e2e;
+          --mantle: #181825;
+          --crust: #11111b;
+          --overlay: #6c7086;
+          --footer: #00000022;
+          /* text */
+          --text: #cdd6f4;
+          --hltext: var(--base);
+          color: var(--text);
+          /* background-specific text */
+          --primary-text: var(--text);
+          --secondary-text: var(--text);
+          --tertiary-text: var(--text);
+          --base-text: var(--text);
+          --mantle-text: var(--text);
+          --crust-text: var(--text);
+          --overlay-text: var(--hltext);
+          --footer-text: var(--text);
+        }
+      }
+      /* style settings */
+      header#header {
+        grid-template-columns: 12rem auto 12rem;
+      }
+      body#background {
+        background: fixed center/cover var(--base);
+        
+        
+      }
+      #background-gradient {
+        background: linear-gradient(
+          45deg, 
+          color-mix(in srgb, var(--mantle) 80%, transparent), transparent, color-mix(in srgb, var(--crust) 20%, transparent)
+        );
+      }
+      content#content {
+        padding: 0 3rem;
+        background: color-mix(in srgb, var(--base) 0%, transparent);
+        border-left: 2px solid var(--primary);
+        border-right: none;
+      }
+      #avatar {
+        
+        border-radius: 1rem;
+        
+      }
+      footer#footer a {
+        color: #f5e0dc;
+      }
+      footer#footer a:hover {
+        color: #94e2d5;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href=assets/favicon-16x16.png>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsivity.css" rel="stylesheet">  
+    <script src="search/main.js"></script>
+    <script src="https://kit.fontawesome.com/b57355f8ac.js" crossorigin="anonymous"></script>
+    <script id="altmetric-embed-js" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/altmetric_badges-e7ba41a192efc3e63f5d48f8a1916dec4b1b49c01075bc7b39481408957b3b28.js"></script>
+    <link id="altmetric-embed-css" rel="stylesheet" type="text/css" href="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed-59614f5c46b49b21eeef3bb28c4fb38d1e7069e8d014752fcb66e84942556802.css">
+  </head>
+
+<body id="background">
+  <div id="background-gradient"></div>
+  <content id="content">
+  
+  <header id="header">
+    
+    
+     
+    <h1 id="title"><a href=.>Sage Wright</a></h1>
+
+    
+    
+    
+     
+    
+    <img id="avatar" src="assets/android-chrome-512x512.png" />
+    
+
+    
+    
+    
+     
+    <p id="tagline">she/her | Senior Bioinformatics Developer</p>
+
+    
+    
+    
+     
+    <ul id="socials">
+        
+        
+        
+        
+        
+        <li>
+            <a href="mailto:sagemwright@gmail.com"><i class="fa-regular fa-at" alt="Email"></i></a>
+            <div class="social-label">Email</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://github.com/sage-wright"><i class="fa-brands fa-github" alt="GitHub"></i></a>
+            <div class="social-label">GitHub</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://orcid.org/0000-0002-0735-5504"><i class="fa-brands fa-orcid" alt="ORCiD"></i></a>
+            <div class="social-label">ORCiD</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://scholar.google.com/citations?user=b_oeT_MAAAAJ&hl=en"><i class="fa-brands fa-google-scholar" alt="Google Scholar"></i></a>
+            <div class="social-label">Google Scholar</div>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href="https://www.linkedin.com/in/sagewright/"><i class="fa-brands fa-linkedin" alt="LinkedIn"></i></a>
+            <div class="social-label">LinkedIn</div>
+        </li>
+        
+    </ul>
+
+    
+    
+</header>
+  
+  <main id="page">
+    <nav class="vertical" id="toc">
+
+<ul>
+
+<li class="nav-item">
+<a href="#hi-im-sage">Hi, I'm Sage</a>
+    
+    <ul>
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#experience">Experience</a>
+    
+    <ul>
+    
+    
+    
+    
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#education">Education</a>
+    
+    <ul>
+    
+    
+    
+    
+    
+    </ul>
+    
+</li>
+
+<li class="nav-item">
+<a href="#more">More</a>
+    
+    <ul>
+    
+    </ul>
+    
+</li>
+
+</ul>
+
+</nav>
+    <!-- If you want a field to show up in the TOC permanently, it has to be a top-level heading -->
+
+<h1 id="hi-im-sage">Hi, I'm Sage</h1>
+<p>I am passionate about public health, bioinformatics, cats, and gnarly bash one-liners. With a BS in Bioinformatics, and a MSc in Bioinformatics and Genomics, I live in Rhode Island with my partner and son.</p>
+<p>I am currently a Senior Bioinformatics Developer at Theiagen Genomics, where I am a major contributor to our rapidly growing codebase. I've been a part of Theiagen since February 2022.</p>
+<p>When not crunching data or writing code, I enjoy spending time with my family, playing the violin in a local community orchestra, knitting, and reading.</p>
+<h1 id="experience">Experience</h1>
+<article>
+<h3 id="theiagen-genomics"><a href="https://www.theiagen.com">Theiagen Genomics</a></h3>
+<p><em>Feb 2022 - Present</em><br />
+Fully Remote</p>
+<h4 id="senior-bioinformatics-developer">Senior Bioinformatics Developer</h4>
+<p><em>Aug 2024 - Present</em></p>
+<h4 id="bioinformatics-scientist">Bioinformatics Scientist</h4>
+<p><em>Feb 2022 - Aug 2024</em></p>
+<p>During my time at Theiagen Genomics, I have led the development of several bioinformatics WDL pipelines and Python tools, including a <em>Mycobacterium tuberculosis</em> antimicrobial resistance interpretation tool (<a href="https://www.github.com/theiagen/tbp-parser">tbp-parser</a>), and a tool that prepares genomic data and metadata for submission to GISAID and NCBI's Sequence Read Archive and BioSample data respositories (<a href="https://www.github.com/theiagen/mercury">Mercury</a>).</p>
+<p>As one of the primary contributions to Theiagen's <a href="https://www.github.com/theiagen/public_health_bioinformatics">Public Health Bioinformatics</a> codebase, I have mentored junior developers and organized the team to meet deadlines, resolve issues, and add new features in order to develop pipelines for public health surveillance and outbreak response.</p>
+<p>In addition, I contributed to several other projects on GitHub, such as the <a href="https://github.com/StaPH-B/docker-builds">StaPH-B docker builds</a> repository, in order to make bioinformatics tools more accessible to public health professionals.</p>
+<p>I also was responsible for innovating the company's use of Google Cloud Platform, primarily using Google Batch and Google Workflows to interact with BigQuery, Looker, and Looker Data Studio, among others. I am familiar with GCP Compute, Storage, and other services provided in the Google Cloud suite, including their command line tools and web interface.</p>
+</article>
+<article>
+<h3 id="pennsylvania-department-of-health-bureau-of-laboratories"><a href="https://www.pa.gov/en/agencies/health/healthcare-and-public-health-professionals/laboratories.html">Pennsylvania Department of Health Bureau of Laboratories</a></h3>
+<p><em>Jun 2021 - Feb 2022</em><br />
+Exton, Pennsylvania</p>
+<h4 id="bioinformatician">Bioinformatician</h4>
+<p>As the first bioinformatician hired by the state of Pennsylvania, I was responsible for setting up their bioinformatics infrastructure and establishing industry best practices for the future.</p>
+<p>In order to enable the rapid data analysis of organisms of public health concern to enable appropriate outbreak responses and epidemiological tracing, I elected to establish cloud-based bioinformatics infrastructure using Google Cloud, specifically using the Terra.bio platform developed by the Broad Institute.</p>
+<p>Due to the timing of my position, I primarily analyzed SARS-CoV-2 genomes to ensure proper sequencing quality, lineage identification, and phylogenetic tree analysis to help track the evolution of the virus during the pandemic.</p>
+</article>
+<h1 id="education">Education</h1>
+<article>
+<h3 id="msc-bioinformatics-and-genomics">M.Sc. Bioinformatics and Genomics</h3>
+<h4 id="pennsylvania-state-university">Pennsylvania State University</h4>
+<p><em>2017 - 2021</em></p>
+<p>Thesis Title: <a href="https://etda.libraries.psu.edu/files/final_submissions/23762">The Effect of CK2 Inhibition on Heterochromatin in AML</a><br />
+Advisor: Dr. Sinisa Dovat</p>
+<p>When my PhD advisor (Dr. Feng Yue) left the university, I was unable to complete my dissertation under his guidance. I elected to finish my time at Penn State with a Master's degree with Dr. Sinisa Dovat.</p>
+</article>
+<article>
+<h3 id="bs-bioinformatics">B.S. Bioinformatics</h3>
+<h4 id="brigham-young-university">Brigham Young University</h4>
+<p><em>2013 - 2017</em></p>
+<p>Minors in Computer Science, English, and Music</p>
+</article>
+<h1 id="more">More</h1>
+<p>This website is still under construction. Come back soon for details!</p>
+    <nav id="page-controls">
+      <a href="#content" id="return-top">
+        <i class="fa fa-arrow-up" alt="⇧"></i> Return to top
+      </a>
+    </nav>
+  </main>
+  </content>
+  <footer id="footer">
+    
+
+<p>Compiled from markdown using <a href="https://www.mkdocs.org/">MkDocs</a>. Theme is <a href="https://teparsons.github.io/mkdocs-landing/">Landing</a> by <a href="https://toddparsons.co.uk">Todd Parsons</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="search/main.js"></script>
+
+  </footer>
+</body>
+
+</html>
