@@ -25,7 +25,7 @@ jobs:
         
       - name: Build documentation
         run: |
-          mkdocs build
+          mkdocs deploy
 
       - name: Copy CNAME
         run: |
