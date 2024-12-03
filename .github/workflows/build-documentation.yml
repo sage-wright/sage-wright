@@ -33,6 +33,8 @@ jobs:
 
       - name: Commit
         run: |
+          git config --global user.email "sage.wright@theiagen.com"
+          git config -- global user.name "sage-wright"
           git add --all
           git commit --all -m "sys: Build documentation"
 
