@@ -12,27 +12,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v4
       
       - name: Setup python
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          key: ${{ github.ref }}
-          path: .cache
 
       - name: Install dependencies
         run: |
           pip install mkdocs-material mkdocs-landing
-      
+        
       - name: Build documentation
         run: |
-          git config user.name sage-wright
-          git config user.email sage.wright@theiagen.com 
-          mkdocs gh-deploy 
+          mkdocs build
+
+      - name: Copy CNAME
+        run: |
+          cp CNAME docs/CNAME
+
+      - name: Commit
+        run: |
+          git add --all
+          git commit --all -m "sys: Build documentation"
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
