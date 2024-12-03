@@ -71,6 +71,6 @@ When my PhD advisor (Dr. Feng Yue) left the university, I was unable to complete
 Minors in Computer Science, English, and Music
 </article>
 
-# Curriculum Vitae
+# More
 
-Find my CV here: 
+This website is still under construction. Come back soon for details!
